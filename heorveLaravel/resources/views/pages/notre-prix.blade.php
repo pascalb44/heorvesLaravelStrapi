@@ -105,6 +105,8 @@
             </div>
         </div>
     </div>
+
+    <img src="{{ asset('images/armoiries_nantes.gif') }}" alt="blason de nantes">
 </section>
 
 <section class="py-5 bg-light">
