@@ -28,7 +28,8 @@
 
 <body>
     <!-- Header (navbar) -->
-        @yield('header')
+        @include('layouts.partials.header')
+       
 
     <main>
         @yield('content')
