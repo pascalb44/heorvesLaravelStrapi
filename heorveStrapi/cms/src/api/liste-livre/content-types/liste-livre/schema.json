@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "liste_livres",
+  "info": {
+    "singularName": "liste-livre",
+    "pluralName": "liste-livres",
+    "displayName": "Liste livre"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nomlivres": {
+      "type": "blocks"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auteurs",
+  "info": {
+    "singularName": "auteur",
+    "pluralName": "auteurs",
+    "displayName": "Auteur"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nom"
+    },
+    "biographie": {
+      "type": "blocks"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "annee_prix": {
+      "type": "integer"
+    },
+    "auteur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::auteur.auteur"
+    },
+    "livres": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::livre.livre"
+    }
+  }
+}

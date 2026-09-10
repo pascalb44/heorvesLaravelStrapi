@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "liste_auteurs",
+  "info": {
+    "singularName": "liste-auteur",
+    "pluralName": "liste-auteurs",
+    "displayName": "Liste auteur"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "nomauteurs": {
+      "type": "blocks"
+    }
+  }
+}
