@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Nos auteurs – Prix HEORVES')
-
 @section('content')
 <!-- Hero Section -->
 @include('layouts.partials.hero', [
@@ -36,7 +34,6 @@
                             <p class="card-text text-muted">
                                 Prix {{ $auteur['annee_prix'] }}
                             </p>
-
                         </div>
                     </div>
                 </a>

@@ -1,27 +1,31 @@
-<!-- resources/views/layouts/partials/hero.blade.php -->
 @props([
-'title' => 'Prix HEORVES', // Titre par défaut
-'subtitle' => null, // Sous-titre (optionnel)
-'heroImage' => null, // Image de fond (optionnel)
+    'title' => null,
+    'subtitle' => null,
+    'heroImage' => null
 ])
 
-<section class="py-5 text-center"
+<section
+    class="text-center {{ $heroImage ? 'py-5' : 'py-4 hero-grey' }}" {{-- couleur du bandeau en css--}}
     @if($heroImage)
-    style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ $heroImage }}');
-                    background-size: cover;
-                    background-position: center;
-                    color: white;"
-    @else
-    style="background-color: #f8f9fa;"
-    @endif>
-    <div class="container py-5">
-        <h1 class="display-4 fw-bold {{ $heroImage ? 'text-white' : 'text-primary' }}">
+        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ $heroImage }}');
+               background-size: cover;
+               background-position: center;
+               color: white;"
+    @endif
+>
+    <div class="{{ $heroImage ? 'container py-5' : '' }}">
+
+        @if($title)
+        <h1 class="fw-bold {{ $heroImage ? 'text-white display-4' : 'text-dark display-5' }}">
             {{ $title }}
         </h1>
+        @endif
+
         @if($subtitle)
-        <p class="lead fs-4 {{ $heroImage ? 'text-white' : 'text-secondary' }}">
+        <p class="lead {{ $heroImage ? 'text-white fs-4' : 'text-secondary' }}">
             {{ $subtitle }}
         </p>
         @endif
+
     </div>
 </section>

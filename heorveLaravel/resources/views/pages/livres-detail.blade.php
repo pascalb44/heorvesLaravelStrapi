@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 @if($type === 'livre')
 <h1>{{ $item['titre'] }}</h1>
 
@@ -33,3 +36,4 @@
 <p>Aucune biographie disponible.</p>
 @endif
 @endif
+@endsection

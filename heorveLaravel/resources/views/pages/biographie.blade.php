@@ -4,18 +4,22 @@
 
 @section('content')
 
+<!-- Hero Section -->
+@include('layouts.partials.hero', [
+'title' => 'Biographie d’Honoré d’Estienne d’Orves',
+'subtitle' => null,
+'heroImage' => null
+])
 <section class="py-5">
     <div class="container">
         <div class="row align-items-center">
-
-            <div class="col-lg-8">
-                <h2>Biographie d’Honoré d’Estienne d’Orves</h2>
+            <div class="containerImg">
                 <img src="{{ asset('images/heorves.jpg') }}" alt="portrait d'Estienne d'Orves">
-                <p class="fs-5">Avant d’être connu pour ses faits de résistance, Honoré d’Estienne d’Orves était un officier de marine de carrière qui a confirmé son engagement pour la Nation en passant des rangs de la Marine Nationale (devenue vichyste par obligation) à la France Libre, ce qui n’était pas évident pour nombre de ses compatriotes.
-                    Le drapeau des FFL en est un symbole<br>
-
-                    <img src="{{ asset('images/FFL.jpg') }}" alt="drapeau des FFL">
-                </p>
+            </div>
+            <p class="fs-5">Avant d’être connu pour ses faits de résistance, Honoré d’Estienne d’Orves était un officier de marine de carrière qui a confirmé son engagement pour la Nation en passant des rangs de la Marine Nationale (devenue vichyste par obligation) à la France Libre, ce qui n’était pas évident pour nombre de ses compatriotes.
+                Le drapeau des FFL en est un symbole.</p>
+            <div class="containerImg">
+                <img src="{{ asset('images/FFL.jpg') }}" alt="drapeau des FFL">
             </div>
         </div>
         <div>

@@ -1,10 +1,11 @@
-<header class="bg-white shadow-sm">
-    <nav class="navbar navbar-expand-lg navbar-light container py-3">
+<header class="nav-custom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container py-3 ">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <span class="fw-bold text-primary">Prix HEORVES</span>
+            <span class="fw-bold text-white">Prix HEORVES</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
+
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
@@ -34,7 +35,7 @@
                     <a class="nav-link" href="{{ route('association') }}">L'association</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('biographie') }}">Biographie d’Honoré d’Estienne d’Orves</a>
+                    <a class="nav-link" href="{{ route('biographie') }}">Biographie d’Estienne d’Orves</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('nos-liens') }}">Nos liens</a>
@@ -45,4 +46,4 @@
             </ul>
         </div>
     </nav>
-</header>
+</header>                                

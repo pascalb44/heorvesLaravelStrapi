@@ -1,11 +1,103 @@
-@import 'tailwindcss';
-
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@import "tailwindcss";
+@layer reset, base, components, utilities;
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Instrument Sans', 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+    .collapse {
+        visibility: visible !important;
+    }
+}
+
+
+/* le site */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+h2 {
+    margin: 4% 0 4%;
+}
+
+.containerImg {
+    margin: 0 auto;
+    width: 30%;
+    padding: 30px;
+}
+
+img {
+    margin: 4% 0 4%;
+}
+
+
+/* nav du header */
+
+.nav-custom {
+    background-color: #1462bf;
+}
+
+.hero-grey {
+    background-color: #c1b2b2;
+    /* ton gris personnalisé */
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+/*
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #e5e5e5 !important;
+}
+    */
+
+/* mentions legales */
+
+.creditImages {
+    line-height: 40px;
+    font-weight: 400;
+    margin-top: 1%;
+}
+
+
+/* page livres */
+
+.bookList {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: 8px 0;
+    margin-top: 10px;
+    box-shadow: #1462bf;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+
+footer p {
+    margin-left: 25%;
+    padding: 10px;
 }

@@ -28,11 +28,12 @@
     <div class="container">
         <div class="row">
             @foreach($livres as $livre)
-            <a href="{{ route('livres.detail', $livre['id']) }}">
+            <a class="bookList" href="{{ route('livres.detail', $livre['id']) }}">
                 <p class="card-text text-muted"> Prix {{ $livre['annee_prix'] }} : {{ $livre['titre'] }}</p>
             </a>
+            @endforeach
         </div>
     </div>
-    @endforeach
+
 </section>
 @endsection

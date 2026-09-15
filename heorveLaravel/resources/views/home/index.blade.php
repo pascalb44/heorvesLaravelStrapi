@@ -7,13 +7,10 @@
     <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
             <h1 class="display-4 fw-bold text-black mb-4">Bienvenue</h1>
-            <p class="fs-5 mb-4">
-                Ce site a pour but de présenter le prix de lecture Honoré d’Estienne d’Orves de l’Association régionale des Auditeurs de l’IHEDN des Pays de la Loire
-                à l’occasion du vingtième anniversaire du prix en 2022.
-            </p>
-            <p class="fs-5 mb-5">
-                L’accès aux œuvres primées et leurs auteurs se trouve en haut de la page <strong>Notre prix</strong>.
-            </p>
+                <p class="fs-5 mb-4">
+                    Ce site a pour but de présenter le prix de lecture Honoré d’Estienne d’Orves de l’Association régionale des Auditeurs de l’IHEDN des Pays de la Loire
+                    à l’occasion du vingtième anniversaire du prix en 2022.
+                </p>
         </div>
     </div>
 </div>

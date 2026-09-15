@@ -6,13 +6,14 @@
 <!-- Hero Section -->
 @include('layouts.partials.hero', [
 'title' => 'Nos liens',
-'subtitle' => 'Découvrez les ressources autour du prix Honoré d’Estienne d’Orves'
+'subtitle' => 'Découvrez les ressources autour du prix Honoré d’Estienne d’Orves',
+'heroImage' => null
 ])
 
 <section class="py-5">
     <div class="container">
         <div class="row align-items-center">
-<!--
+            <!--
             <div class="col-lg-8">
                 <h2>Biographie d’Honoré d’Estienne d’Orves</h2>
                 <p class="fs-5">https://www.ordredelaliberation.fr/fr/compagnons/honore-estienne-dorves-d"<br>
@@ -46,21 +47,21 @@
             https://books.openedition.org/pur/25906 [Olivier Dupont]<br>
         </p>
 -->
-        @foreach($liensParCategorie as $categorie => $liens)
-        <div class="mb-5">
-            <h3>{{ $categorie }}</h3>
-            <div class="list-group">
-                @foreach($liens as $lien)
-                <a href="{{ $lien['url'] }}"
-                    class="list-group-item list-group-item-action"
-                    target="_blank">
-                    <i class="fas fa-external-link-alt me-2"></i>
-                    {{ $lien['title'] }} 
-                </a>
-                @endforeach
+            @foreach($liensParCategorie as $categorie => $liens)
+            <div class="mb-5">
+                <h2>{{ $categorie }}</h2>
+                <div class="list-group">
+                    @foreach($liens as $lien)
+                    <a href="{{ $lien['url'] }}"
+                        class="list-group-item list-group-item-action"
+                        target="_blank">
+                        <i class="fas fa-external-link-alt me-2"></i>
+                        {{ $lien['title'] }}
+                    </a>
+                    @endforeach
+                </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
-    </div>
 </section>
 @endsection
