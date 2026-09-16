@@ -41,6 +41,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::auteur.auteur"
+    },
+    "encart": {
+      "type": "blocks"
     }
   }
 }
