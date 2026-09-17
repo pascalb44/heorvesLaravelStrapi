@@ -14,4 +14,25 @@ class AuteurController extends Controller
 
         return view('pages.auteurs', compact('auteurs'));
     }
+    public function show(int $id)
+{
+    $auteurResponse = Http::get("http://127.0.0.1:1337/api/auteurs", [
+        'filters[id][$eq]' => $id,
+        'populate' => '*'
+    ]);
+
+    $auteurJson = $auteurResponse->json();
+
+    if (!empty($auteurJson['data'])) {
+        $item = $auteurJson['data'][0]['attributes'] ?? $auteurJson['data'][0];
+        $type = 'auteur';
+        return view('pages.livres-detail', compact('item', 'type'));
+    }
+
+    abort(404, "Auteur introuvable");
+}
+
+
+
+
 }

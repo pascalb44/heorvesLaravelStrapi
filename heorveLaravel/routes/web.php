@@ -17,8 +17,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/notre-prix', [NotrePrixController::class, 'index'])->name('notre-prix');
 Route::get('/notre-prix/auteurs', [AuteurController::class, 'index'])->name('notre-prix.auteurs');
 Route::get('/notre-prix/livres', [LivreController::class, 'index'])->name('notre-prix.livres');
-
 Route::get('/livres/{id}', [LivreController::class, 'detail'])->name('livres.detail');
+Route::get('/auteurs/{id}', [AuteurController::class, 'show'])->name('auteurs.detail');
+
 
 Route::get('/mentions-legales', [LegalController::class, 'index'])->name('mentions-legales');
 Route::get('/nos-liens', [LinksController::class, 'index'])->name('nos-liens');

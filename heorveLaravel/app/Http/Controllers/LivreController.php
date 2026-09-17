@@ -28,6 +28,7 @@ class LivreController extends Controller
             $item = $livreJson['data'][0];
             $type = 'livre';
             return view('pages.livres-detail', compact('item', 'type'));
+    
         }
 
         // 2. Chercher un auteur

@@ -27,7 +27,7 @@
         <div class="row">
             @foreach($auteurs as $auteur)
             <div class="col-md-4 col-lg-4 mb-4">
-                <a href="{{ route('livres.detail', $auteur['id']) }}">
+                <a href="{{ route('auteurs.detail', $auteur['id']) }}">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body text-center">
                             <h3 class="card-title">{{ $auteur['nom'] }}</h3>
