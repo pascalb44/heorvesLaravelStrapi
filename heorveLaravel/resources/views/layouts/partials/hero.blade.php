@@ -22,7 +22,7 @@
         @endif
 
         @if($subtitle)
-        <p class="lead {{ $heroImage ? 'text-white fs-4' : 'text-secondary' }}">
+        <p class="lead hero-subtitle {{ $heroImage ? 'fs-4' : '' }}">
             {{ $subtitle }}
         </p>
         @endif

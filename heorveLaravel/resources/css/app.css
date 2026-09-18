@@ -52,20 +52,45 @@ img {
     background-color: #1462bf;
 }
 
-.hero-grey {
-    background-color: #c1b2b2;
-    /* ton gris personnalisé */
-}
-
 .navbar .nav-link,
 .navbar .navbar-brand {
     color: #fff !important;
 }
 
 
+/* arriere-plan du hero */
+
+.hero-grey {
+    background-color: grey;
+}
+
+/* sous-titre du hero*/
+
+.hero-subtitle.lead {
+    color: #ffc725;
+}
+
+
+/* page liste auteurs */
+.auteursListe a,
+.auteursListe a:hover,
+.auteursListe a:active {
+    text-decoration: none;
+}
+
+/* pages details des livers */
+
+.fs-5-5 {
+    font-size: 1.125rem;
+    margin-left: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
 
 /* encart page livre resistantes */
-.encart {
+.encartResistantes {
     border: 1px solid #444;
     padding: 15px;
     margin: 5% 5%;
@@ -73,6 +98,20 @@ img {
     border-radius: 6px;
     font-size: 20px;
 }
+
+
+/* encart page livre Afghanistan */
+
+.encartAfgha {
+    border: 1px solid #444;
+    padding: 15px;
+    margin: 5% 5%;
+    background: #faebcc;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+
 
 
 /* mentions legales */

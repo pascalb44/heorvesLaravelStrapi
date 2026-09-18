@@ -4,7 +4,6 @@
 <!-- Hero Section -->
 @include('layouts.partials.hero', [
 'title' => 'Mentions légales',
-'subtitle' => 'Découvrez les ressources autour du prix Honoré d’Estienne d’Orves'
 ])
 
 <!-- Section : Image et biographie -->
@@ -13,8 +12,7 @@
         <div class="row align-items-center">
 
             <!-- Biographie -->
-            <div class="col-lg-8">
-                <h2>Mentions légales</h2>
+            <div class="col-lg-12">
                     <p class="fs-5">Ce site est non officiel et n’engage que la responsabilité de son auteur Pascal Boucault, gérant d’Ossitoweb.<br>
                         Le site est hébergé chez OVH.<br>
                         Les liens ont été choisis de manière à ne pas influencer le lecteur sur un quelconque site commercial.<br>
@@ -24,7 +22,7 @@
                     </p>
             </div>
             <div class="col-lg-8">
-                <h2>Explications des images</h2>
+                <h2>Source des images</h2>
                     <p class="fs-5 creditImages">Le drapeau des FFL<br>
                         https://commons.wikimedia.org/w/index.php?curid=593178<br>
                     </p>

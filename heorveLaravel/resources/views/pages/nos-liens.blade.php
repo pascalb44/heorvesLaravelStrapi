@@ -16,13 +16,15 @@
             @foreach($liensParCategorie as $categorie => $liens)
             <div class="mb-5">
                 <h2>{{ $categorie }}</h2>
-                <div class="list-group">
+                <div class="list-group d-flex flex-column gap-3 fs-5">
                     @foreach($liens as $lien)
                     <a href="{{ $lien['url'] }}"
-                        class="list-group-item list-group-item-action"
+                        class="list-group-item list-group-item-action border-0"
                         target="_blank">
-                        <i class="fas fa-external-link-alt me-2"></i>
                         {{ $lien['title'] }}
+                        <span class="badge bg-primary float-end"> <!-- icon a droite -->
+                            <i class="fa-solid fa-link"></i>
+                        </span>
                     </a>
                     @endforeach
                 </div>

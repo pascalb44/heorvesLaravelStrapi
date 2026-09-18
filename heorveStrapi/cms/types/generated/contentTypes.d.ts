@@ -588,6 +588,7 @@ export interface ApiLivreLivre extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::livre.livre'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    quote: Schema.Attribute.Blocks;
     resume: Schema.Attribute.Blocks;
     slug: Schema.Attribute.UID<'titre'>;
     titre: Schema.Attribute.String;

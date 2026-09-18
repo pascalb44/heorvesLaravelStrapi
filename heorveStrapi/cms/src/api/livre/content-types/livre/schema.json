@@ -44,6 +44,9 @@
     },
     "encart": {
       "type": "blocks"
+    },
+    "quote": {
+      "type": "blocks"
     }
   }
 }

@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             @foreach($livres as $livre)
-            <a class="bookList" href="{{ route('livres.detail', $livre['id']) }}">
+            <a class="bookList fs-5" href="{{ route('livres.detail', $livre['id']) }}">
                 <p class="card-text text-muted"> Prix {{ $livre['annee_prix'] }} : {{ $livre['titre'] }}</p>
             </a>
             @endforeach
