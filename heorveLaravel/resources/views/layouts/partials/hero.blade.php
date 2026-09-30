@@ -1,18 +1,17 @@
 @props([
-    'title' => null,
-    'subtitle' => null,
-    'heroImage' => null
+'title' => null,
+'subtitle' => null,
+'heroImage' => null
 ])
 
 <section
     class="text-center {{ $heroImage ? 'py-5' : 'py-4 hero-grey' }}" {{-- couleur du bandeau en css--}}
     @if($heroImage)
-        style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ $heroImage }}');
+    style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ $heroImage }}');
                background-size: cover;
                background-position: center;
                color: white;"
-    @endif
->
+    @endif>
     <div class="{{ $heroImage ? 'container py-5' : '' }}">
 
         @if($title)

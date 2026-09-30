@@ -4,7 +4,7 @@
 @if($type === 'livre')
     <h1>{{ $item['titre'] ?? '' }}</h1>
 
-    {{-- Affichage de l'image de couverture --}}
+    {{-- Image de couverture --}}
     <div class="containerImg">
         @if(!empty($item['couverture']))
         <img
@@ -15,66 +15,79 @@
         @endif
     </div>
 
-    {{-- Affichage du resume et des images integrees --}}
-
+    {{-- Résumé --}}
     @if(!empty($item['resume']) && is_array($item['resume']))
         @foreach($item['resume'] as $block)
-        @if(($block['type'] ?? null) === 'paragraph')
-        <p class="fs-5-5">
-            @foreach($block['children'] ?? [] as $child)
-            {{ $child['text'] ?? '' }}
-            @endforeach
-        </p>
-        @elseif(($block['type'] ?? null) === 'image')
-        <div class="containerImg">
 
-            @if(!empty($block['image']))
-            <img
-                src="{{ $block['image']['url'] ?? '' }}"
-                alt="{{ $block['image']['alternativeText'] ?? 'Image' }}"
-                class="img-fluid"
-                style="max-width: 100%; height: auto; margin: 10px 0;">
+            @continue(empty($block))
+
+            @if(($block['type'] ?? null) === 'paragraph')
+                <p class="fs-5-5">
+                    @foreach($block['children'] ?? [] as $child)
+                        {{ $child['text'] ?? '' }}
+                    @endforeach
+                </p>
+
+            @elseif(($block['type'] ?? null) === 'image')
+                <div class="containerImg">
+                    @if(!empty($block['image']))
+                        <img
+                            src="{{ $block['image']['url'] ?? '' }}"
+                            alt="{{ $block['image']['alternativeText'] ?? 'Image' }}"
+                            class="img-fluid"
+                            style="max-width: 100%; height: auto; margin: 10px 0;">
+                    @endif
+                </div>
+
+            @elseif(($block['type'] ?? null) === 'quote')
+                <blockquote class="fw-bold my-3">
+                    @foreach($block['children'] ?? [] as $child)
+                        {{ $child['text'] ?? '' }}
+                    @endforeach
+                </blockquote>
             @endif
-        </div>
-        @endif
+
         @endforeach
+
     @else
-    <p>Aucun résumé disponible.</p>
-        @if($block['type'] === 'quote')
-        <blockquote class="fw-bold my-3">
-            @foreach($block['children'] as $child)
-                {{ $child['text'] }}
-            @endforeach
-        </blockquote>
-        @endif
+        <p>Aucun résumé disponible.</p>
     @endif
 
-    {{-- Affichage de l'encart (uniquement s'il existe et n'est pas vide) --}}
+
+    {{-- ENCARt --}}
     @if(!empty($item['encart']))
-    <div class="encartResistantes encartAfgha">
-        @if(is_array($item['encart']))
-        @foreach($item['encart'] as $encartBlock)
-            @if(($encartBlock['type'] ?? null) === 'paragraph')
-            <p>
-                @foreach($encartBlock['children'] ?? [] as $child)
-                {{ $child['text'] ?? '' }}
+        <div class="encartResistantes encartAfgha">
+
+            @if(is_array($item['encart']))
+                @foreach($item['encart'] as $encartBlock)
+                    @continue(empty($encartBlock))
+
+                    @if(($encartBlock['type'] ?? null) === 'paragraph')
+                        <p>
+                            @foreach($encartBlock['children'] ?? [] as $child)
+                                {{ $child['text'] ?? '' }}
+                            @endforeach
+                        </p>
+                    @endif
                 @endforeach
-            </p>
+
+            @else
+                <p>{{ $item['encart'] }}</p>
             @endif
-        @endforeach
-        @else
-        {{-- Si encart est une chaîne de caractères simple --}}
-        <p>{{ $item['encart'] }}</p>
-        @endif
-    </div>
+
+        </div>
     @endif
+
 
 @elseif($type === 'auteur')
+
     <h1>{{ $item['nom'] ?? '' }}</h1>
     <h3>Biographie :</h3>
 
     @if(!empty($item['biographie']) && is_array($item['biographie']))
         @foreach($item['biographie'] as $block)
+            @continue(empty($block))
+
             @if(($block['type'] ?? null) === 'paragraph')
                 <p>
                     @foreach($block['children'] ?? [] as $child)
@@ -88,6 +101,7 @@
     @else
         <p>Aucune biographie disponible.</p>
     @endif
+
 @endif
 
 @endsection
