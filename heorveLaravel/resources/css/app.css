@@ -46,6 +46,36 @@ img {
 }
 
 
+/* ===== Logo du header ===== */
+
+.brand-logo {
+    height: 70px;
+    /* le logo s'adapte en hauteur, garde ses proportions */
+    width: auto;
+    border-radius: 6px;
+    /* coins légèrement arrondis, facultatif */
+    object-fit: contain;
+    /* fond blanc : le logo JPG reste lisible sur le fond coloré du header */
+    padding: 2px;
+}
+
+/* titre + sous-titre */
+
+.brand-texts {
+    line-height: 1.2;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+}
+
+.brand-tagline {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.85;
+}
+
 /* nav du header */
 
 .nav-custom {
@@ -78,7 +108,8 @@ img {
     text-decoration: none;
 }
 
-/* pages details des livers */
+
+/* pages details des livres */
 
 .fs-5-5 {
     font-size: 1.125rem;
@@ -110,7 +141,6 @@ img {
     border-radius: 6px;
     font-size: 20px;
 }
-
 
 
 

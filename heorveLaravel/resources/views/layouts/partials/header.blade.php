@@ -1,7 +1,11 @@
 <header class="nav-custom shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light container py-3 ">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <span class="fw-bold text-white">Prix HEORVES</span>
+        <a class="navbar-brand d-flex align-items-center gap-3" href="{{ route('home') }}">
+            <img src="{{ asset('images/logo-ihedn-paysdelaloire.jpg') }}" alt="Logo de l'association IHEDN Pays de la Loire" class="brand-logo">
+            <span class="d-flex flex-column brand-texts">
+                <span class="fw-bold text-white brand-title">Prix HEORVES</span>
+                <span class="text-white brand-tagline">2002-2021 20 ans de lecture au service de la nation</span>
+            </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -46,4 +50,4 @@
             </ul>
         </div>
     </nav>
-</header>                                
+</header>
