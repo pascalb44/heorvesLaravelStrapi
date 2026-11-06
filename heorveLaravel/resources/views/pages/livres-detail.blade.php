@@ -8,7 +8,7 @@
     <div class="containerImg">
         @if(!empty($item['couverture']))
         <img
-            src="http://127.0.0.1:1337{{ $item['couverture']['url'] ?? '' }}"
+            src="/strapi{{ $item['couverture']['url'] ?? '' }}"
             alt="{{ $item['couverture']['alternativeText'] ?? 'Couverture du livre' }}"
             class="img"
             style="max-width: 300px; height: auto;">

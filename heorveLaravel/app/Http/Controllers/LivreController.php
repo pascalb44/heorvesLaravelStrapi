@@ -8,7 +8,7 @@ class LivreController extends Controller
 {
     public function index()
     {
-        $response = Http::get('http://localhost:1337/api/livres?populate&sort=annee_prix:desc');
+        $response = Http::get('http://57.131.160.5:1337/api/livres?populate&sort=annee_prix:desc');
 
         $livres = $response->json()['data'] ?? [];
 
@@ -17,7 +17,7 @@ class LivreController extends Controller
     public function detail( int $id)
     {
         // 1. Chercher un livre
-        $livreResponse = Http::get("http://127.0.0.1:1337/api/livres", [
+        $livreResponse = Http::get("http://57.131.160.5:1337/api/livres", [
             'filters[id][$eq]' => $id,
             'populate' => '*'
         ]);
@@ -32,7 +32,7 @@ class LivreController extends Controller
         }
 
         // 2. Chercher un auteur
-        $auteurResponse = Http::get("http://127.0.0.1:1337/api/auteurs", [
+        $auteurResponse = Http::get("http://57.131.160.5:1337/api/auteurs", [
             'filters[id][$eq]' => $id,
             'populate' => '*'
         ]);

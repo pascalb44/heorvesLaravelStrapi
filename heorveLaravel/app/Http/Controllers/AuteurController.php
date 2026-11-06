@@ -8,7 +8,7 @@ class AuteurController extends Controller
 {
     public function index()
     {
-        $response = Http::get('http://localhost:1337/api/auteurs?populate&sort=annee_prix:desc');
+        $response = Http::get('http://57.131.160.5:1337/api/auteurs?populate&sort=annee_prix:desc');
 
         $auteurs = $response->json()['data'] ?? [];
 
@@ -16,7 +16,7 @@ class AuteurController extends Controller
     }
     public function show(int $id)
 {
-    $auteurResponse = Http::get("http://127.0.0.1:1337/api/auteurs", [
+    $auteurResponse = Http::get("http://57.131.160.5:1337/api/auteurs", [
         'filters[id][$eq]' => $id,
         'populate' => '*'
     ]);

@@ -11,7 +11,7 @@ class LinksController extends Controller
     {
         try {
             // Récupère les liens depuis Strapi (format flat)
-            $response = Http::get('http://localhost:1337/api/liens');
+            $response = Http::get('http://57.131.160.5:1337/api/liens');
 
             if (!$response->successful()) {
                 Log::error('Erreur Strapi: ' . $response->body());
